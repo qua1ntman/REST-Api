@@ -32,12 +32,6 @@ app.put('/api/contacts:id', (req, res) => {
     res.json(CONTACTS[idx])
 })
 
-
-
-
-
-
-
 app.use(express.static(path.resolve(__dirname,'client')))  // Все эти запросы должны быть внизу
 app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'index.html'))
